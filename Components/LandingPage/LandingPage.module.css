@@ -1,0 +1,14 @@
+
+.LandingPage{
+    /* border: 1px solid white; */
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    align-items: center;
+}

@@ -1,13 +1,11 @@
 @import 'tailwindcss/utilities';
 @import "tailwindcss/preflight";
 @tailwind utilities;
-
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     color: rgb(219, 212, 212);
@@ -29,7 +27,7 @@ body{
   
   .animated-gradient {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0d0426, #012a53, #292929);
+    background: linear-gradient(135deg, #0d0426, #03264a, #343333);
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -37,8 +35,10 @@ body{
   }
   .outlet{
     width: 100%;
-    min-height:80vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  
+ 

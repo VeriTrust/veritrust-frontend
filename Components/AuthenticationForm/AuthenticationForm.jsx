@@ -8,29 +8,34 @@ function AuthenticationForm({ formType,handleFormType }) {
    handleFormType(isSignup?"login":"signup");
  }
   return (
-    <div className={styles.AuthenticationForm}>
+    <form method="POST" action="/" className={styles.AuthenticationForm}>
       <span className={styles.formHead}>Welcome User</span>
       <span>Please enter your details</span>
     
      {formType === "signup" && <div className={styles.inputBox}>
         <div className={styles.placeholder}>Username </div>
-        <input type="text" />
+        <input type="text" name="username" required/>
       </div> }
 
       <div className={styles.inputBox}>
         <div className={styles.placeholder}>Email </div>
-        <input type="text" />
+        <input type="email" name="usermail"  required />
       </div>
 
       <div className={styles.inputBox}>
         <div className={styles.placeholder}>Password</div>
-        <input type="text" />
+        <input type="password" />
       </div>
 
       <div className={styles.remember}>
         <input type="checkbox" />
         Remember me
       </div>
+
+   
+        <button  className={`${styles.submitBtn} ${styles.continue}`}>Submit</button>
+      
+
 
       <div className={`${styles.inputBox} ${styles.googleBox}`}>
         <img src={google} alt="google" className={styles.logoImg} />
@@ -43,7 +48,7 @@ function AuthenticationForm({ formType,handleFormType }) {
         <Link to={`/${isSignup ? "login" : "signup"}`} onClick={toggleFormType}>{isSignup ? "login" : "signup"}</Link>
         
       </span>
-    </div>
+    </form>
   );
 }
 

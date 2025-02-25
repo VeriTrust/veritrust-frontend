@@ -1,0 +1,92 @@
+.Form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+}
+.AuthForm {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.formHead {
+  font-family:Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', serif;
+  font-size:2rem;
+  font-weight: 600;
+  color: rgba(1, 16, 52, 0.886);
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 70%;
+  }
+  50% {
+    background-position: 100% 70%;
+  }
+  100% {
+    background-position: 20% 70%;
+  }
+}
+.inputBox {
+  background: rgba(251, 253, 253, 0.952);
+  box-shadow: 0 0px 5px rgba(32, 25, 25, 0.256);
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.6rem 0;
+  outline: none;
+  font-size: small;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  font-size:0.8rem;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+}
+.googleBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  background-color: whitesmoke;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.306);
+  margin-bottom: 1.5rem;
+  border-radius: 0.2rem;
+}
+.logoImg {
+  width: 10%;
+  margin-right: 0.6rem;
+}
+.continue {
+  font-size: 0.8rem;
+}
+
+span a {
+  color: #8e2de2;
+}
+.submitBtn {
+  background: #4a00e0;
+  background-size: 300% 300%;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.submitBtn:hover {
+  cursor: pointer;
+  background: #4001bd;
+}
+.msg{
+  font-size: 0.8rem;  
+  margin-top: 0.5rem;
+}

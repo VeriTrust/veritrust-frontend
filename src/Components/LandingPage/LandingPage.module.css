@@ -1,0 +1,46 @@
+.LandingPage {
+  /* background:url(../src/Images/kindpng_447667.png); */
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+.desc {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.subDesc{
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.gradientText{
+  background: linear-gradient(135deg, #6f00ff, #b200ff, #ff0080, #6f00ff);
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s infinite linear;
+}
+.subDesc1{
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 70%;
+  }
+  50% {
+    background-position: 100% 70%;
+  }
+  100% {
+    background-position: 20% 70%;
+  }
+}
+
+
+
+

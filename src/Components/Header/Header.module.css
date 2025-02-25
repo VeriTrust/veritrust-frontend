@@ -1,0 +1,47 @@
+.Header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-bottom: 0.5px solid rgba(26, 25, 25, 0.2);
+}
+
+.logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8rem;
+}
+.logo img {
+  width: 50%;
+}
+
+.navMenus {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+}
+.navMenu  {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+.navMenu:hover,.active {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.buttonMenu {
+  background: none;
+  box-shadow: none;
+  gap: 1rem;
+}
+
+

@@ -16,10 +16,10 @@ body{
 .outlet{
     background-color:rgba(245, 211, 248, 0.66);
     width: 100%;
-    min-height:90vh;
+    min-height:100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
   }
   

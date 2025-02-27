@@ -1,88 +1,147 @@
 .sidebar {
-    width: 20%;
-    height: 100vh;
-    background:white;
-    color: #34495e;
-    padding: 1.2rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
+  width: 22%;
+  height: 100vh;
+  background: white;
+  color: #34495e;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: width 0.3s;
+  overflow: hidden;
+}
+.sidebar h1 {
+  background: linear-gradient(135deg, #47049f, #732aa4,#bb22fd);
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s infinite linear;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 70%;
   }
-  .logo {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   margin-bottom: 1.5rem;
+  50% {
+    background-position: 100% 70%;
   }
-  .logo img{
-    width: 50%;
+  100% {
+    background-position: 20% 70%;
   }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    padding: 0.8rem 1.3rem;
-    cursor: pointer;
-    display: flex;
-    transition: background 0.3s;
-    border-radius: 4px;
-  }
-  
-  .menu li:hover {
-    background: #b013e4;
-    color: white;
-  }
-  
-  .icon {
-    margin-right: 10px;
-    font-size: 18px;
-  }
-  
-  .dropdown {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .dropdown:hover {
-    background: transparent;
-  }
-  .verify{
-    display: flex;
-    justify-content: flex-start;
-  }
-  .verify:hover{
-    background: none;
-  }
-  
-  .subMenu {
-    list-style: none;
-    padding: 5px 20px 5px 30px;
+}
 
-    color: #34495e;
-    border-radius: 4px;
-    margin-top: 5px;
-  }
-  
-  .subMenu li {
-    padding: 5px 0;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .subMenu li:hover {
-        background-color: #34495e;
-  }
-  
-  .chevron {
-    margin-left: auto;
-    transition: transform 0.3s;
-  }
-  
-  .rotate {
-    transform: rotate(180deg);
-  }
-  
+.closed {
+  width: 5%;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  width: 100%;
+ padding-left: 1rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s;
+}
+
+.closed .logo {
+  opacity: 0;
+}
+
+.logo img {
+  width: 40%;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.menu .menuItem {
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  display: flex;
+  transition: background 0.3s;
+  border-radius: 4px;
+  align-items: center;
+  margin: 0.2rem;
+}
+
+.menu .menuItem:hover {
+  background: #47049f;
+  color: white;
+}
+.active{
+  background: #47049f;
+  color: white;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.closed .icon {
+  margin-right: 0;
+}
+
+.closed .menu span {
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown:hover {
+  background: transparent;
+}
+
+.verify {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.verify:hover {
+  background: none;
+}
+
+.subMenu {
+  list-style: none;
+  padding: 5px 20px 5px 30px;
+  color: #34495e;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.subMenu li {
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.subMenu li:hover {
+  background-color: #34495e;
+  color: white;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.toggleButton {
+  color: #b013e4;
+  padding: 2px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  align-self: center;
+  margin-top: auto;
+  font-size: 1.5srem;
+}

@@ -9,6 +9,7 @@ export const cards = [
       sub: "Say goodbye to misleading food labels! Verify brand claims with accuracy and confidence.",
       bgColor: "#faf2d4"  ,
       id:1,
+      width:"20%",
     },
     {
       img: card2,
@@ -16,6 +17,7 @@ export const cards = [
       sub: "Say goodbye to misleading food labels! Verify brand claims with accuracy and confidence.",
       bgColor: "#e2fcdc"  ,
       id:2,
+      width:"20%",
     },
     {
       img: card3,
@@ -23,6 +25,7 @@ export const cards = [
       sub: "Shop smarter and healthier with transparent product information.",
       bgColor: "#e0fcc0"  ,
       id:3,
+      width:"20%",
     },
     {
       img: card4,
@@ -30,5 +33,6 @@ export const cards = [
       sub: " Verify claims using text input, images, or URLs for convenience.",
       bgColor: "#fcdefb" ,
       id:4,
+      width:"20%",
     },
   ];

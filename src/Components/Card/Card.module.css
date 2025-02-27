@@ -1,6 +1,6 @@
 .card {
-  width: 20%;
-  min-height: 50vh;
+  /* width: 20%; */
+ height: 45vh;
   box-shadow: 0px 0px 5px rgba(17, 17, 17, 0.2);
   border-radius: 10px;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 .cardImg {
   width: 100%;
-  min-height: 60%;
+  height: 70%;
   border-radius: 10px;
   overflow: hidden;
 }

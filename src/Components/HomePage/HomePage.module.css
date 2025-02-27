@@ -1,5 +1,43 @@
 .HomeContainer{
     width: 100%;
-    
-  
+    display: flex;
+    padding: 0.3rem;
+}
+.MainPage{
+    float: right;
+    width: 76%;
+    flex-grow: 1;  
+    min-height: 100vh;
+    margin: 0 0.8rem;
+    padding:1rem  1rem;
+    border-radius: 1rem;
+    /* background-color: white; */
+}
+.banner{
+    width: 100%;
+    background-color: rgba(24, 116, 223, 0.893);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #47049f, #732aa4,#bb22fd);
+    color: white;
+}
+.bannerContent{
+    width: 70%;
+}
+.heading{
+    font-size: 2rem;
+    margin: 0;
+    color: rgb(243, 251, 254);
+}
+.cardContainer{
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    height: 45vh;
+    gap: 2rem;
+}
+
+link{
+    width: 100%;
 }

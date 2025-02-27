@@ -25,8 +25,8 @@ function AuthenticationForm({ formType, handleFormType }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/signup",
-        { mail, password },
+        "http://localhost/signup",
+        { username,mail, password },
         {
           headers: {
             "Content-Type": "application/json",
@@ -108,13 +108,3 @@ function AuthenticationForm({ formType, handleFormType }) {
 }
 
 export default AuthenticationForm;
-/* <Link to={"/"} className={`${styles.inputBox} ${styles.googleBox}`}>
-        <img src={google} alt="google" className={styles.logoImg} />
-        <div className={styles.continue}>Continue with Google</div>
-      </Link>
-      <span>
-        {isSignup ? `Already have an account ?` : "Don't have an account ? "}
-        <Link to={`/${isSignup ? "login" : "signup"}`} onClick={toggleFormType}>
-          {isSignup ? "login" : "signup"}
-        </Link>
-      </span>*/

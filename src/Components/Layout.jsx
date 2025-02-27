@@ -20,7 +20,7 @@ const Layout = () => {
         <Route path="/Welcome" element={<LandingPage />} />
         <Route path="/login" element={<AuthenticationForm formType="login" />} />
         <Route path="/signup" element={<AuthenticationForm formType="signup" />} />
-        <Route path="/HomePage" element={<HomePage/>}/>
+        <Route path="/Home" element={<HomePage/>}/>
       </Routes>
     </div>
   );

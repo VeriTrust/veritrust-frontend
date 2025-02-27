@@ -1,61 +1,66 @@
 import React, { useState } from "react";
 import styles from "./SideBar.module.css";
-import logo from "../../Images/ai.png";
+import {Link} from "react-router-dom";
 import {
   FiHome,
-  FiChevronDown,
   FiUser,
   FiLogOut,
   FiCheckSquare,
+  FiShoppingCart,
+  FiMenu,
+  FiMinus,
 } from "react-icons/fi";
 
 const SideBar = () => {
   const [isSideBarOpen, setisSideBarOpen] = useState(true);
+  const [selectedNav, setselectedNav] = useState("Home");
 
   const toggleSidebar = () => {
     setisSideBarOpen(!isSideBarOpen);
   };
 
+  const handleNavClick = (nav) => {
+    setselectedNav(nav);
+  };
+
+  const menuItems = [
+    { icon: <FiHome className={styles.icon} />, name: "Home" },
+    { icon: <FiCheckSquare className={styles.icon} />, name: "Verify" },
+    { icon: <FiHome className={styles.icon} />, name: "Health Check" },
+    { icon: <FiShoppingCart className={styles.icon} />, name: "Explore" },
+    { icon: <FiUser className={styles.icon} />, name: "Profile" },
+    { icon: <FiLogOut className={styles.icon} />, name: "Logout" },
+  ];
+
   return (
     <>
-{ !isSideBarOpen &&   <button onClick={toggleSidebar}>Open</button>}
-   {isSideBarOpen && <div className={styles.sidebar}>
-      <div className={styles.logo}>
-        <img src={logo} />
+      <div
+        className={`${styles.sidebar} ${
+          isSideBarOpen ? styles.open : styles.closed
+        }`}
+      >
+        <div className={styles.logo}>
+          <h1>VeriTrust</h1>
+        </div>
+        <ul className={styles.menu}>
+          {menuItems.map((item, index) => (
+            <Link to={`/${item.name}`} key={index} className={`${styles.menuItem} ${selectedNav === item.name ? styles.active : ""}`} >
+              {item.icon}
+              {isSideBarOpen && <span>{item.name}</span>}
+              {!isSideBarOpen && (
+                <span className={styles.tooltip}>{item.name}</span>
+              )}
+            </Link>
+          ))}
+        </ul>
+        <button className={styles.toggleButton} onClick={toggleSidebar}>
+          {isSideBarOpen ? (
+            <FiMenu className={styles.icon} />
+          ) : (
+            <FiMenu className={styles.icon} />
+          )}
+        </button>
       </div>
-      <ul className={styles.menu}>
-        <li>
-          <FiHome className={styles.icon} />
-          Home
-        </li>
-        <li  className={styles.dropdown}>
-          <div className={styles.verify}>
-            <FiCheckSquare className={styles.icon} />
-            Verify
-          </div>
-        </li>
-        <li>
-          <FiHome className={styles.icon} />
-          Health Check
-        </li>
-        <li>
-          <FiHome className={styles.icon} />
-          Explore
-        </li>
-        <li>
-          <FiUser className={styles.icon} />
-          Profile
-        </li>
-        <li>
-          <FiLogOut className={styles.icon} />
-          Logout
-        </li>
-        <li onClick={toggleSidebar}>
-          <FiLogOut className={styles.icon} />
-          close
-        </li>
-      </ul>
-    </div>}
     </>
   );
 };

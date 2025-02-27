@@ -6,38 +6,41 @@ import styles from "./AuthenticationForm.module.css";
 import { useState } from "react";
 
 function AuthenticationForm({ formType, handleFormType }) {
-  // const [loading, setLoading] = useState(false);
-
-  //to check whether form is login or signup form
-  let isSignup = formType === "signup" ? true : false;
+  // Check if the form is for Signup or Login
+  const isSignup = formType === "signup";
   const toggleFormType = () => {
     handleFormType(isSignup ? "login" : "signup");
   };
 
-  //To handle form submission
-
+  // Form State
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [mail, setmail] = useState("");
+  const [mail, setMail] = useState("");
   const navigate = useNavigate();
 
+  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const endpoint = isSignup ? "http://localhost/signup" : "http://localhost/login";
+
     try {
       const response = await axios.post(
-        "http://localhost/signup",
-        { username,mail, password },
+        endpoint,
+        isSignup
+          ? { username, mail, password }  // Send username, email, and password for Signup
+          : { mail, password },           // Send email and password for Login
         {
           headers: {
             "Content-Type": "application/json",
           },
         }
       );
+
       const token = response.data.token;
       localStorage.setItem("token", token);
-      navigate("/HomePage");
+      navigate("/Home");
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error(`${isSignup ? "Signup" : "Login"} failed:`, error);
     }
   };
 
@@ -66,7 +69,7 @@ function AuthenticationForm({ formType, handleFormType }) {
             placeholder="Email"
             name="mail"
             value={mail}
-            onChange={(e) => setmail(e.target.value)}
+            onChange={(e) => setMail(e.target.value)}
             className={styles.inputBox}
             required
           />
